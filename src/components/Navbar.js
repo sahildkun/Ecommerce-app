@@ -11,8 +11,9 @@ const Navbar = () => {
         </Link>
         
         <div className='flex flex-auto justify-end space-x-3'>
-        <Link to={"/shop"}><h1>shop</h1></Link>
-        <Link to={"/shop"}><h1>shop</h1></Link>
+        <Link to={"/shop"}><h1>SHOP</h1></Link>
+        <Link to={"/shop"}><h1>CONTACT</h1></Link>
+        <Link to={"/sign-in"}><h1>SIGN IN</h1></Link>
         
         </div>
     </div>
