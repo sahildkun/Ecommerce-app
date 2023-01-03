@@ -51,10 +51,10 @@ const resetForm = () => {
        setFormdata({...formdata,[name]:value})
     }
   return (
-    <div>
-        <form  method='post' onSubmit={handleSubmit}>
+    <div className='  flex justify-center my-10 '>
+        <form  method='post' onSubmit={handleSubmit} className="flex flex-col  bg-gray-600 p-14">
             <label>NAME</label>
-            <input type="text" placeholder='enter your name' required onChange={handleChange} name="name" value={name}/>
+            <input type="text" placeholder='enter your name' className='p-2' required onChange={handleChange} name="name" value={name}/>
 
             <label>Email</label>
             <input type="email" name="email"  required onChange={handleChange} value={email} />
@@ -65,7 +65,7 @@ const resetForm = () => {
             <label>Confirm Password</label>
             <input type="password" name="confirmPassword"  required onChange={handleChange} value={confirmPassword} />
 
-            <button type="submit">Submit</button>
+            <button type="submit" className='max-w-lg bg-black text-white mt-10'>Submit</button>
         </form>
     </div>
   )
