@@ -10,7 +10,7 @@ const SignIn = () => {
   return (
     <>
     
-    <div>SignIn</div>
+    <div></div>
     <div className='grid grid-cols-2 my-10'>
     <LoginForm/>
     <Signup/>

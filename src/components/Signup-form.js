@@ -1,6 +1,7 @@
 
 import React from 'react'
-import { useState } from 'react'
+import { useState , useContext} from 'react'
+import { UserContext } from '../context/user.context'
 import { createAuthUserWithEmailAndPassword,createUserDocumentFromAuth } from '../utils/firebase/firebase.utils'
 //initializing data before the form was submitted 
 const defaulData = {
@@ -15,6 +16,8 @@ const Signup = () => {
 
     const [formdata, setFormdata] = useState(defaulData);
     const {name ,email , password,confirmPassword} = formdata;
+    const {setCurrentUser} = useContext(UserContext);
+    
 // console.log(formdata)
 const resetForm = () => {
   setFormdata(defaulData);
@@ -34,6 +37,7 @@ const resetForm = () => {
           email,
           password
           );
+          setCurrentUser(user);
         await createUserDocumentFromAuth(user,{name})
         resetForm();
       }
@@ -60,10 +64,10 @@ const resetForm = () => {
             <input type="email" name="email"  required onChange={handleChange} value={email} />
 
             <label>Password</label>
-            <input type="password" name="password"  required onChange={handleChange} value={password} />
+            <input type="password" name="password"  required onChange={handleChange} value={password} autoComplete='on' />
 
             <label>Confirm Password</label>
-            <input type="password" name="confirmPassword"  required onChange={handleChange} value={confirmPassword} />
+            <input type="password" name="confirmPassword"  required onChange={handleChange} value={confirmPassword} autoComplete='on' />
 
             <button type="submit" className='max-w-lg bg-black text-white mt-10'>Submit</button>
         </form>
