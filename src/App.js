@@ -3,7 +3,7 @@ import ProductDisplay from './components/ProductDisplay';
 import { Route, Router , Routes } from 'react-router-dom';
 import Home from './routes/Home';
 import Navbar from './components/Navbar';
-import Shop from './routes/Shop';
+import Shop from './routes/Shop/Shop';
 import SignIn from './routes/sign in/SignIn';
 function App() {
 
