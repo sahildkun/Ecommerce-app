@@ -9,7 +9,7 @@ const ProductCard = ({product}) => {
 
     const additemToCart = () => {
       addToCart(product)
-      setItemCount(itemCount+1)
+      
     }
   return (
    
