@@ -14,9 +14,9 @@ function App() {
    <Navbar/>
    <Routes>
     <Route path='/' element={<Home/>}/>
-    <Route path='/shop' element={<Shop/>}/>
-    <Route path='/sign-in' element={<SignIn/>}/>
-    <Route path='/checkout' element={<Checkout/>}/>
+    <Route path='shop/*' element={<Shop/>}/>
+    <Route path='sign-in' element={<SignIn/>}/>
+    <Route path='checkout' element={<Checkout/>}/>
    </Routes>
     
     </>
