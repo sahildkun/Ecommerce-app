@@ -8,6 +8,7 @@ import { ProductsContext } from '../../context/products.context'
 import CategoryPreview from '../../components/CategoryPreview/CategoryPreview';
 import CategoriesPreview from '../CategoriesPreview/CategoriesPreview';
 import Category from '../AllCategories/Category';
+import CategoryWise from '../CategoryWise/CategoryWise';
 
 const Shop = () => {
   const {products } = useContext(ProductsContext);
@@ -17,7 +18,8 @@ const Shop = () => {
    <>
    <Routes>
     <Route index element={<CategoriesPreview/>}/>
-    <Route path=':category' element={<Category/>}/>
+    <Route path=':category/*' element={<CategoryWise/>}/>
+           
    </Routes>
    </>
   )

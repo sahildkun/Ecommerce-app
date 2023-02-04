@@ -9,7 +9,7 @@ import CategoryPreview from '../../components/CategoryPreview/CategoryPreview';
 const CategoriesPreview = () => {
   const {products } = useContext(ProductsContext);
 
-  console.log(products);
+  // console.log(products);
   return (
    <>
 
