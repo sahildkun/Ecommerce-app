@@ -1,8 +1,9 @@
 
 import React from 'react'
 import { useState , useContext} from 'react'
-import { UserContext } from '../context/user.context'
+
 import { createAuthUserWithEmailAndPassword,createUserDocumentFromAuth } from '../utils/firebase/firebase.utils'
+import { setCurrentUser } from '../store/user/user.action'
 //initializing data before the form was submitted 
 const defaulData = {
     name:'',
@@ -11,12 +12,11 @@ const defaulData = {
     confirmPassword:''
 }
 
-
 const Signup = () => {
 
     const [formdata, setFormdata] = useState(defaulData);
     const {name ,email , password,confirmPassword} = formdata;
-    const {setCurrentUser} = useContext(UserContext);
+   
     
 // console.log(formdata)
 const resetForm = () => {

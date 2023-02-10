@@ -1,15 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
-import { UserContext } from '../context/user.context'
+
 import { signOutUser } from '../utils/firebase/firebase.utils'
 import Cart from './Cart/CartIcon'
 import Cartdropdown from './Cart-Dropdown/Cart-dropdown'
 import { CartContext } from '../context/cart.context'
-
+import { useSelector } from 'react-redux'
+import { setCurrentUser } from '../store/user/user.action'
+import { selectCurrentUser } from '../store/user/selectCurrentUser'
 const Navbar = () => {
-  const { currentUser , setCurrentUser} = useContext(UserContext);
+  // const { currentUser , setCurrentUser} = useContext(UserContext);
   const { isCartOpen } = useContext(CartContext)
+  const currentUser = useSelector(selectCurrentUser);
   // console.log(currentUser);
   const signOuthandler =async() => {
      await signOutUser();

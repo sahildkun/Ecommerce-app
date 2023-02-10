@@ -2,7 +2,7 @@
 import React from 'react'
 import { useState , useContext} from 'react'
 
-import { UserContext } from '../context/user.context'
+
 import { createAuthUserWithEmailAndPassword,createUserDocumentFromAuth,signInWithGooglePopup,signInAuthUserWithEmailAndPassword } from '../utils/firebase/firebase.utils'
 //initializing data before the form was submitted 
 const defaulData = {
